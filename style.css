@@ -3,6 +3,9 @@
     src: url('./assets/fonts/Roboto-Regular.ttf');
 }
 
+
+/* reset */
+
 *,
 *::before,
 *::after {
@@ -10,6 +13,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+}
+
 
 :root {
     font-family: 'roboto', 'sans';
@@ -19,8 +27,6 @@
     --Grey: hsl(231, 7%, 60%);
     --White: hsl(0, 0%, 100%);
 }
-
-
 
 /* utilize */
 
@@ -44,7 +50,7 @@ p {
     justify-content: space-between;
     height: 100vh;
     align-items: start !important;
-        padding: 9rem 2.5rem 2.5rem !important;
+    padding: 9rem 2.5rem 2.5rem !important;
     flex-direction: column;
 }
 
@@ -118,6 +124,7 @@ ul>li::before {
 }
 
 .btn--accent {
+    transition: all 250ms;
     width: 100%;
     font-size: 1rem;
     font-weight: 600;
@@ -130,43 +137,39 @@ ul>li::before {
 .btn--accent:hover {
     cursor: pointer;
     background: linear-gradient(125deg, rgba(255, 98, 87, 1) 0%, rgba(250, 146, 61, 1) 100%);
-    box-shadow: 0px 25px 40px -6px rgba(255, 98, 87, 0.58), 0px 25px 40px -20px rgba(128, 128, 128, 0.93);
+    box-shadow: 0px 6px 40px -6px rgba(255, 98, 87, 0.58), 0px 20px 40px -20px rgba(128, 128, 128, 0.93);
 }
 
-picture {
-    width: 70%;
-    flex-shrink: 1;
-}
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
     body {
         display: grid;
         place-content: center;
-        height: 100vh;
         background-color: var(--CharcoalGrey);
+    }
+
+    img {
+        object-fit: cover;
+        width: min-content;
+        height: 100%;
     }
 
     .newsletter {
         margin: 2rem;
         display: flex;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
         max-width: 1000px;
-        padding: 3rem 3rem !important;
+        padding: 1rem !important;
         border-radius: 1rem;
-        padding: .7rem;
-        place-content: center;
         background-color: var(--White);
     }
 
     .newsletter__container {
-        /* width: 90%; */
+        max-width: 600px;
     }
 
-    picture {
+    .newsletter > picture {
         order: 2;
     }
+    
 
     .newsletter--success {
         width: 470px !important;
