@@ -140,7 +140,7 @@ ul>li::before {
     box-shadow: 0px 6px 40px -6px rgba(255, 98, 87, 0.58), 0px 20px 40px -20px rgba(128, 128, 128, 0.93);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 816px) {
     body {
         display: grid;
         place-content: center;
@@ -154,11 +154,11 @@ ul>li::before {
     }
 
     .newsletter {
+        padding: 1rem;
         margin: 2rem;
         display: flex;
-        max-width: 1000px;
-        padding: 1rem !important;
-        border-radius: 1rem;
+        column-gap: 2rem;
+        border-radius: 2rem;
         background-color: var(--White);
     }
 
